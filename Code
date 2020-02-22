@@ -1,0 +1,17 @@
+#Variables
+
+money real number
+price is real number
+number_candies <- 0
+
+calculate start (real money, real price, number_candies)
+  if money>=0 and price>=0
+    while money>=price
+      number_candies <- number_candies + 1
+      money<- money - price
+    End while
+  End if
+  return number_candies
+End calculate
+      
+    
