@@ -1,0 +1,36 @@
+INSERT INTO school (name,country,capacity)
+VALUES
+('Beauxbatons Academy of Magic','France',550),
+('Castelobruxo','Brazil',380),
+('Durmstrang Institute','Norway',570),
+('Hogwarts School of Witchcraft and Wizardry','United Kingdom',450),
+('Ilvermorny School of Witchcraft and Wizardry','USA',300),
+('Koldovstoretz','Russia',125),
+('Mahoutokoro School of Magic','Japan',800),
+('Uagadou School of Magic','Uganda',350);
+
+----------------------------------------------------------------------------------------
+SET SQL_SAFE_UPDATES = 0; unlock safe update option
+
+-----------------------------------------------------------------------------------------
+UPDATE school
+SET country='Sweden'
+WHERE country='Durmstrang Institute';
+
+-----------------------------------------------------------------------------------------
+
+UPDATE school
+SET capacity=700
+WHERE name='Mahoutokoro School of Magic';
+------------------------------------------------------------------------------------------------------
+DELETE FROM school
+WHERE `name` LIKE '%Magic%';
+------------------------------------------------------------------------------------------------------
+SELECT * FROM wild_db_quest.school;
+
+id	name	capacity	country
+1	Castelobruxo	380	Brazil
+2	Durmstrang Institute	570	Norway
+3	Hogwarts School of Witchcraft and Wizardry	450	United Kingdom
+4	Ilvermorny School of Witchcraft and Wizardry	300	USA
+5	Koldovstoretz	125	Russia
