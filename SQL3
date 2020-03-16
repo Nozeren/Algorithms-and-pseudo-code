@@ -15,7 +15,7 @@ SET SQL_SAFE_UPDATES = 0; unlock safe update option
 -----------------------------------------------------------------------------------------
 UPDATE school
 SET country='Sweden'
-WHERE country='Durmstrang Institute';
+WHERE country='Norway';
 
 -----------------------------------------------------------------------------------------
 
