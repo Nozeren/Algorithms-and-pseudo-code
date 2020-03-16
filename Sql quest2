@@ -16,7 +16,7 @@ id	firstname	lastname	birthday	birth_place	biography	is_muggle
 SELECT firstname FROM wizard
 WHERE firstname LIKE 'H%';
 ----------------------------------------------------------------
-lastname
+firstname
 Harry
 Hermione
 
