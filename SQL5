@@ -1,0 +1,134 @@
+1)
+SELECT lastname, firstname, role, team_id
+FROM wizard w
+INNER JOIN player p ON w.id=p.wizard_id
+ORDER BY team_id,role,lastname,firstname
+
+
+lastname	firstname	role	team_id
+Black	Sirius	beater	1
+Brown	Lavender	beater	1
+Finnigan	Seamus	beater	1
+Hagrid	Rubeus	beater	1
+Longbottom	Alice	beater	1
+McGonagall	Minerva	beater	1
+Potter	Harry	beater	1
+Potter	James	beater	1
+Thomas	Dean	beater	1
+Weasley	Arthur	beater	1
+Weasley	Percy	beater	1
+Bell	Katie	chaser	1
+Dumbledore	Albus	chaser	1
+Granger	Hermione	chaser	1
+J.	Lily	chaser	1
+Jordan	Lee	chaser	1
+Longbottom	Augusta	chaser	1
+Longbottom	Frank	chaser	1
+Longbottom	Neville	chaser	1
+Pettigrew	Peter	chaser	1
+Spinnet	Alicia	chaser	1
+Weasley	George	chaser	1
+Wood	Oliver	chaser	1
+	Cadogan	keeper	1
+Creevey	Dennis	keeper	1
+de	Nicholas	keeper	1
+Dumbledore	Aberforth	keeper	1
+Johnson	Angelina	keeper	1
+Weasley	Ginevra	keeper	1
+Binns	Cuthbert	seeker	1
+Creevey	Colin	seeker	1
+Gryffindor	Godric	seeker	1
+Vane	Romilda	seeker	1
+Weasley	Fred	seeker	1
+Weasley	Ronald	seeker	1
+Weasley	William	seeker	1
+Clearwater	Penelope	beater	2
+Quirrell	Quirinus	beater	2
+Ravenclaw	Helena	beater	2
+Warren	Myrtle	beater	2
+Chang	Cho	chaser	2
+Edgecombe	Marietta	chaser	2
+Flitwick	Filius	chaser	2
+Goldstein	Anthony	chaser	2
+Lockhart	Gilderoy	chaser	2
+Lovegood	Luna	chaser	2
+Lovegood	Xenophilius	chaser	2
+Ollivander	Garrick	chaser	2
+Corner	Michael	seeker	2
+Ravenclaw	Rowena	seeker	2
+Trelawney	Sybill	seeker	2
+Bulstrode	Millicent	beater	3
+Crabbe	Vincent	beater	3
+Flint	Marcus	beater	3
+Parkinson	Pansy	beater	3
+Snape	Severus	beater	3
+Zabini	Blaise	beater	3
+Baron	Bloody	chaser	3
+Lestrange	Bellatrix	chaser	3
+Lestrange	Rodolphus	chaser	3
+Malfoy	Draco	chaser	3
+Malfoy	Lucius	chaser	3
+Nigellus	Phineas	chaser	3
+Nott	Theodore	chaser	3
+Riddle	Tom	chaser	3
+Tonks	Andromeda	chaser	3
+Black	Regulus	keeper	3
+Goyle	Gregory	seeker	3
+Lestrange	Rabastan	seeker	3
+Malfoy	Narcissa	seeker	3
+Slytherin	Salazar	seeker	3
+Umbridge	Dolores	seeker	3
+Abbott	Hannah	beater	4
+Finch-Fletchley	Justin	beater	4
+Friar	Fat	beater	4
+Smith	Hepzibah	beater	4
+Sprout	Pomona	beater	4
+Tonks	Nymphadora	beater	4
+Bones	Amelia	chaser	4
+Scamander	Newton	chaser	4
+Bones	Susan	keeper	4
+Diggory	Cedric	keeper	4
+Smith	Zacharias	keeper	4
+Hufflepuff	Helga	seeker	4
+__________________________________________________________________________________
+2)
+SELECT lastname, firstname
+FROM wizard w
+INNER JOIN player p ON w.id=p.wizard_id WHERE p.role= 'seeker'
+ORDER BY lastname,firstname
+
+lastname	firstname
+Binns	Cuthbert
+Corner	Michael
+Creevey	Colin
+Goyle	Gregory
+Gryffindor	Godric
+Hufflepuff	Helga
+Lestrange	Rabastan
+Malfoy	Narcissa
+Ravenclaw	Rowena
+Slytherin	Salazar
+Trelawney	Sybill
+Umbridge	Dolores
+Vane	Romilda
+Weasley	Fred
+Weasley	Ronald
+Weasley	Willia
+____________________________________________________________________________________________
+3)not sure about this one
+SELECT lastname, firstname
+FROM wizard w
+LEFT JOIN player p ON w.id=p.wizard_id
+WHERE role IS NULL
+ORDER BY lastname,firstname
+
+lastname	firstname
+	Crabbe
+Boot	Terry
+Lupin	Remus
+Patil	Padma
+Patil	Parvati
+Robins	Demelza
+Slughorn	Horace
+Weasley	Charles
+Weasley	Molly
