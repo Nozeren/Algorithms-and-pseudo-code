@@ -1,0 +1,46 @@
+1))
+SELECT name,count(*) as nu_players FROM player p
+LEFT JOIN team t ON p.team_id=t.id
+GROUP BY t.id
+order by nu_players DESC;
+
+name	nu_players	
+Gryffindor	36	
+Slytherin	21	
+Ravenclaw	15	
+Hufflepuff	12	
+__________________________________________________________________________________________--
+
+2))
+SELECT name,count(*) as nu_players FROM player p
+LEFT JOIN team t ON p.team_id=t.id
+GROUP BY t.id
+HAVING nu_players>=14
+order by name 
+;
+
+name	nu_players	
+Gryffindor	36	
+Ravenclaw	15	
+Slytherin	21	
+_____________________________________________________________________________________________--
+
+3))
+
+SELECT name,firstname,DAYNAME(enrollment_date) as day_week
+FROM wizard w
+LEFT JOIN player p ON w.id=p.wizard_id
+LEFT JOIN team t ON p.team_id=t.id
+WHERE name= 'Gryffindor'
+HAVING day_week='Monday'
+ORDER BY enrollment_date;
+
+name	firstname	day_week	
+Gryffindor	George	Monday	
+Gryffindor	Alice	Monday	
+Gryffindor	Cadogan	Monday	
+Gryffindor	Godric	Monday	
+Gryffindor	Sirius	Monday	
+Gryffindor	Aberforth	Monday	
+Gryffindor	Augusta	Monday	
+			
